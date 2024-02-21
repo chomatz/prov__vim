@@ -1,2 +1,23 @@
 ---
-# tasks file for prov__vim
+
+- name: ensure tasks run only on selected os releases
+  block:
+
+    - name: disable steamos filesystem protection
+      ansible.builtin.include_role:
+        name: mgmt__steam_deck
+        tasks_from: steamos_readonly.yml
+
+    - name: install vim
+      ansible.builtin.package:
+        name: vim
+        state: present
+
+  when: >
+    (ansible_distribution == "Archlinux" and ansible_distribution_release == "holo") or
+    ansible_distribution == "CentOS" or
+    ansible_distribution == "Fedora" or
+    ansible_distribution == "RedHat" or
+    ansible_distribution == "Rocky"
+
+...
