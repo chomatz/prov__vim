@@ -9,9 +9,9 @@ plugin=(
 config_baseline=(
 	"set mouse-=a"
 	"set cursorcolumn"
-	"highlight CursorColumn ctermbg=DarkGray"
+	"highlight CursorColumn ctermbg=Gray"
 	"set cursorline"
-	"highlight CursorLine ctermbg=DarkGray"
+	"highlight CursorLine ctermbg=Gray"
 	"set tabstop=4"
 	"set softtabstop=0 noexpandtab"
 	"set shiftwidth=4"
