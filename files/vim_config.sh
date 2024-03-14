@@ -20,6 +20,7 @@ config_baseline=(
 	"set list lcs=tab:\|\ "
 	"set number"
 	"nnoremap <space> za"
+	"syntax on"
 )
 config_indentLine=(
 	"autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab"
