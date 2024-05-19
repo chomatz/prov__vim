@@ -8,9 +8,9 @@
         name: mgmt__steam_deck
         tasks_from: steamos_readonly.yml
 
-    - name: install vim
+    - name: "install {{ vim.packages }}"
       ansible.builtin.package:
-        name: vim
+        name: "{{ vim.packages }}"
         state: present
 
     - name: upload vim auto configuration script

@@ -1,0 +1,8 @@
+---
+
+vim:
+  packages:
+    - git-core
+    - vim
+
+...
